@@ -25,3 +25,26 @@
 //	printf("a+b=%d", sum);
 //	return 0;
 //}
+
+
+
+//写一个函数求两个整数的较大值
+//int MAX(int a,int b)
+//{
+//	if (a <= b)
+//	{
+//		printf("%d\n", b);
+//	}
+//	else
+//	{
+//		printf("%d\n", a);
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int x, y;
+//	scanf("%d %d", &x, &y);
+//	MAX(x, y);
+//	return 0;
+//}
