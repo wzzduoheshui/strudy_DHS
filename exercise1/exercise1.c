@@ -13,18 +13,18 @@
 //	return 0;
 //}
 
-int main()
-{
-	//输入两个数据求和
-	int a, b, sum;
-	a = 0;
-	b = 0;
-	printf("请输入需要求和的两个数据\n");
-	scanf("%d %d", &a, &b);
-	sum = a + b;
-	printf("a+b=%d", sum);
-	return 0;
-}
+//int main()
+//{
+//	//输入两个数据求和
+//	int a, b, sum;
+//	a = 0;
+//	b = 0;
+//	printf("请输入需要求和的两个数据\n");
+//	scanf("%d %d", &a, &b);
+//	sum = a + b;
+//	printf("a+b=%d", sum);
+//	return 0;
+//}
 
 
 
