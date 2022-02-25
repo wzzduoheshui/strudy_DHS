@@ -91,16 +91,39 @@
 //}
 
 
+//int main()
+//{
+//	int a,x;
+//	scanf("%d", &a);
+//	while (a>=1)
+//	{
+//		
+//		x = a % 10;
+//		a /= 10;
+//		printf("%d", x);
+//	}
+//	return 0;
+//}
+
+
+int max3(int a, int b, int c)
+{
+    if (a > b && a > c)
+        return a;
+    if (b > a && b > c)
+        return b;
+    if (c > a && c > b)
+        return c;
+}
 int main()
 {
-	int a,x;
-	scanf("%d", &a);
-	while (a>=1)
-	{
-		
-		x = a % 10;
-		a /= 10;
-		printf("%d", x);
-	}
-	return 0;
+    int a, b, c, x, y, z;
+    double m;
+    scanf("%d %d %d", &a, &b, &c);
+    x = max3(a + b, b, c);
+    y = max3(a, b + c, c);
+    z = max3(a, b, b + c);
+    m = (double)x / (y + z);
+    printf("%.2f", m);
+    return 0;
 }
