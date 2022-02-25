@@ -62,3 +62,45 @@
 //		a++;
 //	}
 //}
+
+
+//int main()
+//{
+//    char arr[4];
+//    int i;
+//    scanf("%s", arr);
+//    for (i = 3; i >= 0; i--)
+//    {
+//        printf("%d", arr[i]);
+//    }
+//    return 0;
+//}
+
+
+
+//int main()
+//{
+//    int i;
+//    char arr[5] = {'0','0','0','0','\0'};
+//    for (i = 0; i <4; i++)
+//    {
+//        scanf("%c",&arr[i]);
+//    }
+//    printf("%s", arr);
+//    return 0;
+//}
+
+
+int main()
+{
+	int a,x;
+	scanf("%d", &a);
+	while (a>=1)
+	{
+		
+		x = a % 10;
+		a /= 10;
+		printf("%d", x);
+	}
+	return 0;
+}
