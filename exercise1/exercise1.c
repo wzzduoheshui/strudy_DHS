@@ -106,24 +106,39 @@
 //}
 
 
-int max3(int a, int b, int c)
-{
-    if (a > b && a > c)
-        return a;
-    if (b > a && b > c)
-        return b;
-    if (c > a && c > b)
-        return c;
-}
+//int max3(int a, int b, int c)
+//{
+//    if (a >= b && a >= c)
+//        return a;
+//    if (b >= a && b >= c)
+//        return b;
+//    if (c >= a && c >= b)
+//        return c;
+//    return 0;
+//}
+//int main()
+//{
+//    int a, b, c, x, y, z;
+//    double m;
+//    scanf("%d %d %d", &a, &b, &c);
+//    x = max3(a + b, b, c);
+//    y = max3(a, b + c, c);
+//    z = max3(a, b, b + c);
+//    m = (double)x / (y + z);
+//    printf("%.2f", m);
+//    return 0;
+//}
+
+
+
 int main()
 {
-    int a, b, c, x, y, z;
-    double m;
-    scanf("%d %d %d", &a, &b, &c);
-    x = max3(a + b, b, c);
-    y = max3(a, b + c, c);
-    z = max3(a, b, b + c);
-    m = (double)x / (y + z);
-    printf("%.2f", m);
+    int i;
+    char arr[5] = {'0','0','0','0','\0'};
+    for (i = 0; i <4; i++)
+    {
+        scanf("%c",&arr[i]);
+    }
+    printf("%s", arr);
     return 0;
 }
