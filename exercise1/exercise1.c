@@ -131,14 +131,46 @@
 
 
 
-int main()
-{
-    int i;
-    char arr[5] = {'0','0','0','0','\0'};
-    for (i = 0; i <4; i++)
-    {
-        scanf("%c",&arr[i]);
-    }
-    printf("%s", arr);
-    return 0;
-}
+//int main()
+//{
+//    int i;
+//    char arr[5] = {'0','0','0','0','\0'};
+//    for (i = 0; i <4; i++)
+//    {
+//        scanf("%c",&arr[i]);
+//    }
+//    printf("%s", arr);
+//    return 0;
+//}
+
+
+//
+//
+//int sum(int m,int n)
+//{
+//	int i;
+//	for (i = 1; i <= n; i++)
+//	{
+//		m *= i;
+//	}
+//	return m;
+//}
+//int main()
+//{
+//	int n = 0;
+//	int m = 1;
+//	scanf("%d", &n);
+//	int x = 0;
+//	for (; n >= 1; n--)
+//	{
+//
+//		x += sum(m, n);
+//	}
+//	printf("%d\n", x);
+//	return 0;
+//}
+
+
+
+
+
