@@ -1,0 +1,3 @@
+﻿  function.c
+D:\get-text\bita\function\function.c(147): warning C4716: “is_leap_year”: 必须返回一个值
+  function.vcxproj -> D:\get-text\bita\function\Debug\function.exe
