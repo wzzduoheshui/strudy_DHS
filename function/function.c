@@ -162,21 +162,71 @@
 
 
 
-//写一个函数，实现一个整形有序数组的二分查找。
+////写一个函数，实现一个整形有序数组的二分查找。
+//
+//int find(int arr[], int k, int sz)
+//{
+//	int left = 0;
+//	int right = sz-1;//最右边元素的下表应为元素个数-1
+//	int mid;
+//	while (left <= right)//左边小于等于右边
+//	{
+//		//mid = (left + right) / 2;
+//		mid = left + (right - left) / 2;
+//		if (arr[mid] < k)
+//		{
+//			left = mid+1;//建议改成mid+1跳过mid
+//		}
+//		else if (arr[mid] > k)
+//		{
+//			right = mid-1;
+//		}
+//		else if (arr[mid] = k)
+//		{
+//			return mid;
+//		}
+//	}
+//	return EOF;
+//}
+//int main()
+//{
+//	//找到了就返回下标
+//	//找不到就返回-1 
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };//在arr中查找
+//	int k = 0;//查找的元素是
+//	int sz = sizeof(arr) / sizeof(arr[0]);//一共有几个元素
+//	//arr中的元素个数=arr总共所占的字节/一个元素所占的字节
+//	scanf("%d", &k);//要查的元素
+//	int ret = find (arr, k, sz);
+//	if (ret == -1)
+//	{
+//		printf("找不到");
+//	}
+//	else 
+//	printf("找到了，下标是%d", ret);
+//	return 0;
+//}
+
+
+
+
+//函数的声明和定义 
+
+
+//形参的名字可以省略
+
+
+//引入头文件
+#include"add.h"
+//导入静态库
+#pragma comment(lib,"add.lib")
+
 
 int main()
 {
-	//去哪里查--arr
-	//查谁----k
-	//怎么查----二分法
-	//一共有几个元素--用sizeof
-	//
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int k = 0;
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	//arr中的元素个数=arr总共所占的字节/一个元素所占的字节
-	scanf("%d", &k);
-	find_arr(arr, k, sz);
-	printf("找到了，下标是%d", a);
+	int a=10;
+	int b = 20;
+	int sum = Add(a, b);
+	printf("%d", sum);
 	return 0;
 }
