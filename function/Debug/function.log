@@ -1,2 +1,4 @@
 ﻿  function.c
+D:\get-text\bita\function\function.c(282,21): warning C4047: “函数”:“char”与“char [7]”的间接级别不同
+D:\get-text\bita\function\function.c(282,18): warning C4024: “sz”: 形参和实参 1 的类型不同
   function.vcxproj -> D:\get-text\bita\function\Debug\function.exe

@@ -222,11 +222,62 @@
 #pragma comment(lib,"add.lib")
 
 
+//int main()
+//{
+//	int a=10;
+//	int b = 20;
+//	int sum = Add(a, b);
+//	printf("%d", sum);
+//	return 0;
+//}
+
+
+
+//函数的递归
+//int main()
+//{
+//	printf("hehe");
+//	main();
+//	return 0;
+//}
+
+
+
+
+
+
+//接受一个整型值（无符号），按照顺序打印它的每一位。
+
+//void print(int n)
+//{
+//	if (n > 9)
+//	{
+//		print(n / 10);
+//	}
+//	printf(" %d ", n % 10);
+//}
+//int main()
+//{
+//	unsigned int num = 0;
+//	scanf("%d", &num);
+//	print(num);
+//
+//	return 0;
+//}
+
+
+
+
+//编写函数不允许创建临时变量，求字符串长度
+//主函数创建字符串，导入sz函数之中，
+
+int sz(char s)
+{
+	return (sizeof(s));
+}
 int main()
 {
-	int a=10;
-	int b = 20;
-	int sum = Add(a, b);
-	printf("%d", sum);
+	char arr[]="abcdef";
+	printf("%d", sz(arr));
 	return 0;
 }
