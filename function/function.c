@@ -271,13 +271,156 @@
 //编写函数不允许创建临时变量，求字符串长度
 //主函数创建字符串，导入sz函数之中，
 
-int sz(char s)
-{
-	return (sizeof(s));
-}
-int main()
-{
-	char arr[]="abcdef";
-	printf("%d", sz(arr));
-	return 0;
-}
+//int main()
+//{
+//	char arr[] = "abcedf";
+//	int len = strlen(arr);
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+
+//int my_strlen(char* str)
+//{
+//	int count = 0;//统计字符个数
+//	while (*str!='\0')
+//	{
+//		count++; 
+//		str++;
+//	}
+//	return count;
+//
+//}
+//int main()
+//{
+//	char arr[] = "abcedf";
+//	int len = my_strlen(arr);
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+
+
+
+//int my_strlen(char* str)
+//{
+//	if (*str != '\0')
+//	{
+//		return 1 + my_strlen(str + 1);
+//	}
+//	else
+//		return 0;
+//}
+//int main()
+//{
+//	char arr[] = "abcedf";
+//	int len = my_strlen(arr);
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+
+
+////用函数的递归求n的阶乘
+//int fac(int n)
+//{
+//	if (n <= 1)
+//	{
+//		return n;
+//	}
+//	else
+//		return n * fac(n - 1);
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int ret = fac(n);
+//	printf("%d", ret);
+//	return 0;
+//}
+
+
+
+//1   1    2    3   5    8   13....
+//1   2    3    4   5    6    7....n
+//n=(n-1)+(n-2)
+//7=6+5
+//7=4+5+4+3
+
+
+
+//求第n个斐波那契数
+//int fib(int n)
+//{
+//	if (n <= 2)
+//		return 1;
+//	else
+//		return fib(n - 1) + fib(n - 2);
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);//第n个斐波那契数
+//	int ret = fib(n);
+//	printf("%d", ret);
+//	return 0;
+//}
+
+
+
+//1   1    2    3   5    8   13....
+//1   2    3    4   5    6    7....n
+//a   b    c ...
+//    a    b    c..................n
+
+//int fib(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 2;
+//	int d = 2;
+//	if (n <= 2)
+//		return 1;
+//	for (d = 4; d <= n; d++)
+//	{
+//		a = b;
+//		b = c;
+//		c = a + b;
+//	}
+//	return c;
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);//第n个斐波那契数
+//	int ret = fib(n);
+//	printf("%d", ret);
+//	return 0;
+//}
+
+
+
+//int fib(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 1;
+//	while (n > 2)
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);//第n个斐波那契数
+//	int ret = fib(n);
+//	printf("%d", ret);
+//	return 0;
+//}
+
