@@ -75,34 +75,43 @@
 
 
 
-#define N 5
-int main()//本程序求数组中第二大的数，假设数组的前两个数不同时是最大的数
-{
-    float gz[N] = { 300,700,600,600,500 };
-    float max, second;   //max是最大值，second是第二大的值
-    int i, j, k;   //j是max对应的下标，k是second对应的下标
-    if (gz[0] < gz[1])
-    {
-        max = gz[1]; j = 1;
-        second = gz[0]; k = 0;
-    }
-    else
-    {
-        max = gz[0]; j = 0;
-        second = gz[1]; k = 1;
-    }
-    for (i = 2; i < N; i++)
-    {
-        if (gz[i] > max) //gz[i]大于最大工资则将最大工资复制给第二大工资，gz[i]赋值给最大工资max
-        {
-            second = max; k = j;
-            max = gz[i]; j = i;
-        }
-        else if (gz[i] > second && gz[i] < max)//gz[i]大于第二大工资但小于最大工资，则将gz[i]赋值给第二大工资
-        {
-            second = gz[i]; k = i;
-        }
-    }
-    printf("第二大的工资为：%f\n", second);
-    printf("其对应的下标为：%d\n", k);
-}
+//#define N 5
+//int main()//本程序求数组中第二大的数，假设数组的前两个数不同时是最大的数
+//{
+//    float gz[N] = { 300,700,600,600,500 };
+//    float max, second;   //max是最大值，second是第二大的值
+//    int i, j, k;   //j是max对应的下标，k是second对应的下标
+//    if (gz[0] < gz[1])
+//    {
+//        max = gz[1]; j = 1;
+//        second = gz[0]; k = 0;
+//    }
+//    else
+//    {
+//        max = gz[0]; j = 0;
+//        second = gz[1]; k = 1;
+//    }
+//    for (i = 2; i < N; i++)
+//    {
+//        if (gz[i] > max) //gz[i]大于最大工资则将最大工资复制给第二大工资，gz[i]赋值给最大工资max
+//        {
+//            second = max; k = j;
+//            max = gz[i]; j = i;
+//        }
+//        else if (gz[i] > second && gz[i] < max)//gz[i]大于第二大工资但小于最大工资，则将gz[i]赋值给第二大工资
+//        {
+//            second = gz[i]; k = i;
+//        }
+//    }
+//    printf("第二大的工资为：%f\n", second);
+//    printf("其对应的下标为：%d\n", k);
+//}
+
+
+
+
+
+
+
+
+
