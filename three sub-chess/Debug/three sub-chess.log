@@ -1,10 +1,2 @@
-﻿  game.c
-D:\get-text\bita\three sub-chess\game.c(23,10): warning C4013: “printf”未定义；假设外部返回 int
-  text.c
-D:\get-text\bita\three sub-chess\game.h(6,37): error C2143: 语法错误: 缺少“)”(在“常数”的前面)
-D:\get-text\bita\three sub-chess\game.h(6,37): error C2143: 语法错误: 缺少“{”(在“常数”的前面)
-D:\get-text\bita\three sub-chess\game.h(6,37): error C2059: 语法错误:“常数”
-D:\get-text\bita\three sub-chess\game.h(6,49): error C2059: 语法错误:“)”
-D:\get-text\bita\three sub-chess\text.c(17,11): warning C4013: “Initboard”未定义；假设外部返回 int
-D:\get-text\bita\three sub-chess\text.c(19,11): warning C4013: “prinboard”未定义；假设外部返回 int
-  正在生成代码...
+﻿  text.c
+  three sub-chess.vcxproj -> D:\get-text\bita\three sub-chess\Debug\three sub-chess.exe

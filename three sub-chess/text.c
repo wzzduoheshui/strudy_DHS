@@ -1,7 +1,6 @@
 #define  _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
 #include "game.h"
-
+//游戏菜单
 void menu()
 {
 	printf("*************************\n");
@@ -9,17 +8,19 @@ void menu()
 	printf("****2.结束游戏.**********\n");
 	printf("*************************\n");
 }
+//游戏过程函数
 void game()
 {
 	//存放下棋的数据
-	char board[row][col] = { 0 };
+	char board[Row][Col] = { 0 };
 	//初始化棋盘为全空格
-	Initboard(board, row, col);
+	Intboard(board, Row, Col);
 	//打印棋盘
-	printboard(board, row,col);
+	printboard(board, Row,Col);
+	//玩家下棋
+	//playermove(board, Row, Col);
 	
 }
-
 //测试三子棋运行逻辑
 void text()
 {
@@ -33,7 +34,8 @@ void text()
 		{
 		case 1:
 		{
-			printf("三子棋");
+			printf("三子棋\n");
+			game();
 			break;
 		}
 		case 2:
