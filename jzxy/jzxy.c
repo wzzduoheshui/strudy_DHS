@@ -206,14 +206,40 @@
 
 
 //（6）以下程序存在问题吗？
-//#include<stdio.h>
+////#include<stdio.h>
+//int main()
+//{
+//	char i = 0;//i是有符号char类型，数据范围：-128-----127
+//	for (i = 0; i < 127; i++)
+//	{
+//		printf("%d hello world\n", i);
+//	}
+//	return 0;
+//}
+
+
+
 int main()
 {
-	char i = 0;//i是有符号char类型，数据范围：-128-----127
-	for (i = 0; i < 127; i++)
+	int i = 0;
+	int j = 0;
+	char name[5][10] = { 0 };
+	float gz[5] = { 0 };
+	for(i=0;i<5;i++)
 	{
-		printf("%d hello world\n", i);
+		if (i != '\n') while (getchar() != '\n'); //接受键盘缓冲区中的回车键	
+		printf("mz");
+		gets(name[i]); 
+		printf("gz");
+		scanf("%f", &gz[i]);
 	}
-	return 0;
+	for (i = 0; i < 5; i++)
+	{
+		puts(name[i]);
+		printf("\t");
+		printf("%f", gz[i]);
+	}
+		printf("\n");
+	
 }
 
