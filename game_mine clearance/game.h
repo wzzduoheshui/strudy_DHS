@@ -18,3 +18,6 @@ void mine_board(char arr[Rows][Cols], int row, int col);
 
 //打印玩家棋盘
 void print_show(char arr[Rows][Cols], int row, int col);
+
+//玩家输入坐标与雷区做比较
+void play_board(char arr1[Rows][Cols], char arr2[Row][Col], int row, int col);

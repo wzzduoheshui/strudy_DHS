@@ -12,18 +12,22 @@ void menu()
 //扫雷游戏的实现
 void game()
 {
-	char min = 'm';//后台棋盘
-	char sho = 's';//展示棋盘
+	int str;//扫雷返回数据
 	//实现扫雷游戏
 	char mine[Rows][Cols] = {0};//创建后台空间
 	char show[Rows][Cols] = {0};//创建展示空间
 	//初始化棋盘
-	init_board(mine, Rows, Cols, min);
-	init_board(show, Rows, Cols, sho);
+	init_board(mine, Rows, Cols, '0');
+	init_board(show, Rows, Cols, '*');
 	//布置雷区
 	mine_board(mine, Rows, Cols);
+	//作弊版本（打印雷区棋盘）
+	//print_show(mine, Rows, Cols);
 	//打印玩家棋盘
 	print_show(show, Rows, Cols);
+	//玩家输入坐标与雷区做比较
+	play_board(mine, show, Row, Col);
+
 }
 void test()
 {
