@@ -1,3 +1,0 @@
-D:\vs2019\c.c\peng1\Debug\peng1.exe
-D:\vs2019\c.c\xxsjjcclxcx\Debug\peng1.exe
-D:\get-text\bita\xxsjjcclxcx\Debug\peng1.exe
