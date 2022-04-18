@@ -176,3 +176,178 @@
 //
 //	return 0;
 //}
+
+
+////求一个整数存储在内存中的二进制中1的个数。
+//int main()
+//{
+//	int num = 5;
+//	int c = 0;
+//	for (int i = 0; i < 32; i++)
+//	{
+//
+//		if (1==((num >> i) & 1))
+//		{
+//			c++;
+//		}
+//	}
+//	printf("%d", c);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int num = 0;
+//	if (num)
+//	{
+//
+//	}
+//	if (!num)//num为假做什么
+//	{
+//
+//	}
+//	if (num == 0)
+//	{
+//
+//	}
+//}
+
+
+
+//#include <stdbool.h>
+//int main()
+//{
+//	_Bool flag1 = true;
+//	_Bool flag2 = false;
+//}
+//
+//int main()
+//{
+//	int a = 0;
+//	int* p = &a;
+//	int arr[10] = { 0 };
+//	&arr;//取出的是数组的地址
+//}
+
+//int main()
+//{
+//	//int a = 0;
+//	//printf("%d\n", sizeof(a));
+//	//printf("%d\n", sizeof(int));
+//	//printf("%d\n", sizeof a);
+//
+//	//int arr[10] = { 0 };
+//	//printf("%d", sizeof(arr));
+//
+//	//int a = 10;
+//	//short s = 0;
+//	//printf("%d\n", sizeof(s = a + 2));
+//	//printf("%d\n", sizeof(a));
+//	//printf("%d\n", sizeof(s));
+//	//printf("%d", s);
+//}
+//void test1(int arr[])
+//{
+//	printf("2.%d\n", sizeof(arr));//(2)??
+//}
+//void test2(char ch[])
+//{
+//	printf("4.%d\n", sizeof(ch));//(4)??
+//}
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	char ch[10] = { 0 };
+//	printf("1.%d\n", sizeof(arr));//(1)??
+//	printf("3.%d\n", sizeof(ch));//(3)??
+//	test1(arr);
+//	test2(ch);
+//	return 0;
+//}
+
+//int main()
+//{
+//	//int a = 0;
+//	////000000000000000000000000000000--a
+//	////111111111111111111111111111111--~a
+//	//printf("%d", ~a);
+//
+//	int a = 11;
+//	//00000000000000000000000000001101
+//	//如果要将1101改为1111
+//	//00000000000000000000000000001011
+//	//00000000000000000000000000000100
+//	//00000000000000000000000000001111
+//	//在这个位置或一个1就可以得到
+//	a |= (1 << 2);
+//	printf("%d\n", a);
+//	//如果要改回去
+//	//00000000000000000000000000001111
+//	//11111111111111111111111111111011//按位与
+//	//00000000000000000000000000000100//对这个按位取反得到上面数字
+//	a &= (~(1 << 2));
+//	printf("%d\n", a);
+//}
+
+//int main()
+//{
+//	int a = 1;
+//	printf("a=%d\n", a);
+//	printf("++a=%d\n", ++a);
+//	printf("a++=%d\n", a--);
+//	printf("--a=%d\n", --a);
+//	printf("a--=%d\n", a--);
+//}
+
+//
+//int main()
+//{
+//	if ("abcd" == "abbdef")//这里不能这样比较应该使用，
+//		                  //这里比较的是两个字符串首字符a的地址
+//		                  //应该使用strcmp（比较的是对应位置字符的大小不是长度）
+//	{
+//
+//	}
+//}
+
+//int main()
+//{
+//    int i = 0, a = 1, b = 2, c = 3, d = 4;
+//    i = a++ && ++b && d++;
+//    printf("a = %d\n b = %d\n c = %d\nd = %d\n", a, b, c, d);
+//    i = a++||++b||d++;
+//    printf("a = %d\n b = %d\n c = %d\nd = %d\n", a, b, c, d);
+//    return 0;
+//}
+
+//int main()
+//{
+//	int a = 3;
+//	int b = 0;
+//	if (a > 5)
+//		b = 3;
+//	else
+//		b = -3;
+//}
+//int main()
+//{
+//	int a = 5;
+//	int b = 0;
+//	b = (a > 5 ? 3:-3);
+//}
+
+//int main()
+//{
+//	int a = 1;
+//	int b = 2;
+//	int c = (a > b, a = b + 10, a, b = a + 1);//逗号表达式
+//	printf("%d", c);//13
+//}
+
+    
+int main()
+{
+    char ch1 = 3;
+    char ch2 = 127;
+
+}
