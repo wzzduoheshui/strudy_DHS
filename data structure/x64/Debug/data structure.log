@@ -1,0 +1,3 @@
+﻿  22_4_19_test.c
+D:\get-text\bita\data structure\22_4_19_test.c(127,11): warning C4101: “pos”: 未引用的局部变量
+  data structure.vcxproj -> D:\get-text\bita\data structure\x64\Debug\data structure.exe
