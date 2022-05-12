@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\x64"
   ],
-  "SelectedNode": "\\data structure.sln",
+  "SelectedNode": "\\data structure.vcxproj.user",
   "PreviewInSolutionExplorer": false
 }
