@@ -68,6 +68,13 @@ void TestSList2()
 int main()
 {
 	//TestSList1();
-	TestSList2();
+	//TestSList2();
+	SLTNode* n1 = NULL;
+	SListPushFront(&n1, 1);
+	SListPushFront(&n1, 2);
+	SListPushFront(&n1, 3);
+	SListPushFront(&n1, 3);
+	SListPushFront(&n1, 3);
+	SListPrint(n1);
 	return 0;
 }
