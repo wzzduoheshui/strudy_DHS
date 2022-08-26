@@ -33,8 +33,53 @@ void testList1()
 
 }
 
+void testList2()
+{
+	LTNode* plist = ListInit();
+	Listprint(plist);//打印链表
+
+	ListPushFront(plist, 5);
+	ListPushFront(plist, 4);
+	ListPushFront(plist, 3);
+	ListPushFront(plist, 2);
+	ListPushFront(plist, 1);
+	Listprint(plist);//打印链表
+
+	printf("%d\n", ListSize(plist));
+
+
+	ListPopFront(plist);//头删
+	Listprint(plist);//打印链表
+
+	ListDestory(plist);//销毁链表
+	plist = NULL;
+
+
+	ListPopFront(plist);//头删
+	Listprint(plist);//打印链表
+
+	ListPopFront(plist);//头删
+	Listprint(plist);//打印链表
+
+	ListPopFront(plist);//头删
+	Listprint(plist);//打印链表
+
+	ListPopFront(plist);//头删
+	Listprint(plist);//打印链表
+
+	ListPopFront(plist);//头删
+	Listprint(plist);//打印链表
+
+	ListPushFront(plist, 1);
+	Listprint(plist);//打印链表
+
+	printf("%d\n", ListSize(plist));
+}
+
+
 int main()
 {
-	testList1();
+	//testList1();
+	testList2();
 	return 0;
 }

@@ -97,3 +97,71 @@ void ListPopBack(LTNode* phead)//尾删
 		phead->prev = tailprev;
 	}
 }
+
+void ListPopFront(LTNode* phead)//头删
+{
+	assert(phead);
+
+	LTNode* head = phead->next;
+
+	if (head != phead)
+	{
+		head = head->next;
+		free(phead->next);
+		phead->next = head;
+		head->prev = phead;
+	}
+}
+
+
+void ListInsert(LTNode* pos, LTDataType x)//在pos位置之前插入x
+{
+	assert(pos);
+
+	LTNode* prev = pos->prev;
+	LTNode* newnode = BuyListNode(x);
+	prev->next = newnode;
+	pos->prev = newnode;
+	newnode->prev = prev;
+	newnode->next = pos;
+}
+
+void ListErase(LTNode* pos)//删除pos位置的结点
+{
+	assert(pos);
+
+	LTNode* next = pos->next;
+	LTNode* prev = pos->prev;
+
+	prev->next = next;
+	next->prev = prev;
+	free(pos);
+}
+
+int ListSize(LTNode* phead)//计算链表长度
+{
+	assert(phead);
+
+	LTNode* cur = phead->next;
+	int size = 0;
+	while (cur != phead)
+	{
+		size++;
+		cur = cur->next;
+	}
+	return size;
+}
+
+void ListDestory(LTNode* phead)//销毁链表
+{
+	assert(phead);
+	
+	LTNode* cur = phead->next;
+	while (cur != phead)
+	{
+		LTNode* next = cur->next;
+		ListErase(cur);
+		cur = next;
+	}
+	free(phead);
+}
