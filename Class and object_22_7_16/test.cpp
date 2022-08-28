@@ -104,19 +104,191 @@ using namespace std;
 //}
 #include "head.h"
 
-//声明中放结构的定义
-struct QN
-{
-	QN* next;
-	int val;
-};
- 
-class Q
+////声明中放结构的定义
+//struct QN
+//{
+//	QN* next;
+//	int val;
+//};
+// 
+//class Q
+//{
+//public:
+//	void Init();
+//	void Push();
+//private:
+//	QN* head;
+//	QN* tail;
+//};
+
+
+//class SList
+//{
+//public:
+//	void pob();
+//
+//	int head;//声明
+//	int top;
+//};
+//
+//int x;//定义
+//extern int x;//声明
+//
+//int main()
+//{
+//	cout << sizeof(SList) << endl;
+//
+//	SList s1;//类的实例化
+//	return 0;
+//}
+//
+//class aa
+//{
+//public:
+//	void print()
+//	{
+//		cout << 1 << endl;
+//	}
+//	int aa;
+//};
+//int main()
+//{
+//	aa* aaa = nullptr;
+//	aaa->print();
+//	 
+//}
+
+//class Date
+//{
+//public:
+//	//如果就不希望进行类的初始化怎么办呢？（函数重载）
+//	//Date()
+//	//{
+//	//	_year = 1;
+//	//	_month = 1;
+//	//	_day =1;
+//	//}
+//	Date(int year = 1, int month = 1, int day = 1)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	void printf()
+//	{
+//		cout <<  _year <<"/" << _month <<"/" << _day << endl;
+//	}
+//private:
+//	int _year;//声明
+//	int _month;
+//	int _day;
+//};
+//
+//int main()
+//{
+//	Date d1(2022, 8, 28);//这样就完成了类的初始化
+//	//如果就不希望进行类的初始化怎么办呢？（函数重载）
+//	Date d2;
+//	return 0;
+//}
+
+
+//class date
+//{
+//public:
+//	void init(int year, int month, int day)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	void printf()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+//private:
+//	int _year;//声明
+//	int _month;
+//	int _day;
+//};
+//int main()
+//{
+//	Date d1;
+//	d1.Init(2022, 7, 07);
+//
+//	Date d2;
+//	d2.Init(2022, 8, 28);
+//
+//	d1.printf();
+//	d2.printf();
+//	return 0;
+//}
+
+//class Date
+//{
+//public:
+//	void printf()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+//private:
+//	int _year = 1;//这里不是初始化，而是给默认构造函数的缺省值
+//	int _month = 1;
+//	int _day = 1;
+//};
+//struct MQ
+//{
+//	MQ()
+//	{
+//		//默认构造函数
+//	}
+//	int x;
+//	int y;
+//	int z;
+//};
+//class MyQueue
+//{
+//	MQ _x;
+//	MQ _y;
+//};
+//int main()
+//{
+//	MyQueue d1;
+//	return 0;
+//}
+
+class Date
 {
 public:
-	void Init();
-	void Push();
+	void Init(int year, int month, int day)
+	{
+		_year = year;
+		_month = month;
+		_day = day;
+	}
+	void printf()
+	{
+		cout << _year << "/" << _month << "/" << _day << endl;
+	}
 private:
-	QN* head;
-	QN* tail;
+	int _year;//声明
+	int _month;
+	int _day;
 };
+struct Date_
+{
+	int _year;
+	int _month;
+	int _day;
+};
+int main()
+{
+	Date d1;
+
+	Date_ D1;
+	
+	cout << sizeof(d1) << endl;
+	cout << sizeof(D1) << endl;
+
+	return 0;
+}
