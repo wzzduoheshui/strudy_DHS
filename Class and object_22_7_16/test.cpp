@@ -257,20 +257,149 @@ using namespace std;
 //	return 0;
 //}
 
+//class Date
+//{
+//public:
+//	void Init(int year, int month, int day)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	void printf()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+//private:
+//	int _year;//声明
+//	int _month;
+//	int _day;
+//};
+//struct Date_
+//{
+//	int _year;
+//	int _month;
+//	int _day;
+//};
+//int main()
+//{
+//	Date d1;
+//
+//	Date_ D1;
+//	
+//	cout << sizeof(d1) << endl;
+//	cout << sizeof(D1) << endl;
+//
+//	return 0;
+//}
+
+//class Date
+//{
+//public:
+//	Date(int year = 0, int month = 0, int day = 0)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	Date(const Date& d)
+//	{
+//		_year = d._year;
+//		_month = d._month;
+//		_day = d._day;
+//	}
+//	void printf()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+//private:
+//	int _year;//声明
+//	int _month;
+//	int _day;
+//};
+//struct Date_
+//{
+//	int _year;
+//	int _month;
+//	int _day;
+//};
+//
+//int main()
+//{
+//	Date d1(2022, 03, 29);
+//
+//	return 0;
+//}
+
+
+//typedef int DataType;
+//class Stack
+//{
+//public:
+//	Stack(size_t capacity = 10)
+//	{
+//		_array = (DataType*)malloc(capacity * sizeof(DataType));
+//		if (nullptr == _array)
+//		{
+//			perror("malloc申请空间失败");
+//			return;
+//		}
+//		_size = 0;
+//		_capacity = capacity;
+//	}
+//	void Push(const DataType& data)
+//	{
+//		// CheckCapacity();
+//		_array[_size] = data;
+//		_size++;
+//	}
+//	~Stack()
+//	{
+//		if (_array)
+//		{
+//			free(_array);
+//			_array = nullptr;
+//			_capacity = 0;
+//			_size = 0;
+//		}
+//	}
+//private:
+//	DataType* _array;
+//	size_t _size;
+//	size_t _capacity;
+//};
+//int main()
+//{
+//	Stack s1;
+//	s1.Push(1);
+//	s1.Push(2);
+//	s1.Push(3);
+//	s1.Push(4);
+//	Stack s2(s1);
+//	return 0;
+//}
+
 class Date
 {
 public:
-	void Init(int year, int month, int day)
+	Date(int year = 0, int month = 0, int day = 0)
 	{
 		_year = year;
 		_month = month;
 		_day = day;
 	}
+	Date(const Date& d)
+	{
+		_year = d._year;
+		_month = d._month;
+		_day = d._day;
+	}
+
 	void printf()
 	{
 		cout << _year << "/" << _month << "/" << _day << endl;
 	}
-private:
+//private:
 	int _year;//声明
 	int _month;
 	int _day;
@@ -281,14 +410,26 @@ struct Date_
 	int _month;
 	int _day;
 };
+
+bool operator==(const Date& x1,const  Date& x2)//比较相等
+{
+	return x1._year == x2._year
+		&& x1._month == x2._month
+		&& x1._day == x2._day;
+}
+
+int operator-(Date x1, Date x2)//相减
+{
+
+}
 int main()
 {
-	Date d1;
+	Date d1(2022, 8, 29);
+	Date d2(2022, 8, 29);
 
-	Date_ D1;
 	
-	cout << sizeof(d1) << endl;
-	cout << sizeof(D1) << endl;
+	
+
 
 	return 0;
 }
