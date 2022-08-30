@@ -379,6 +379,61 @@ using namespace std;
 //	return 0;
 //}
 
+//class Date
+//{
+//public:
+//	Date(int year = 0, int month = 0, int day = 0)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	Date(const Date& d)
+//	{
+//		_year = d._year;
+//		_month = d._month;
+//		_day = d._day;
+//	}
+//
+//	void printf()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+////private:
+//	int _year;//声明
+//	int _month;
+//	int _day;
+//};
+//struct Date_
+//{
+//	int _year;
+//	int _month;
+//	int _day;
+//};
+//
+//bool operator==(const Date& x1,const  Date& x2)//比较相等
+//{
+//	return x1._year == x2._year
+//		&& x1._month == x2._month
+//		&& x1._day == x2._day;
+//}
+//
+//int operator-(Date x1, Date x2)//相减
+//{
+//
+//}
+//int main()
+//{
+//	Date d1(2022, 8, 29);
+//	Date d2(2022, 8, 29);
+//
+//	
+//	
+//
+//
+//	return 0;
+//}
+
 class Date
 {
 public:
