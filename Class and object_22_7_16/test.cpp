@@ -434,6 +434,53 @@ using namespace std;
 //	return 0;
 //}
 
+//class Date
+//{
+//public:
+//	Date(int year = 0, int month = 0, int day = 0)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	int GetYear()
+//	{
+//		return _year;
+//	}
+//	int GetMonth()
+//	{
+//		return _month;
+//	}
+//	int GetDay()
+//	{
+//		return _day;
+//	}
+//private:
+//	int _year;//声明
+//	int _month;
+//	int _day;
+//};
+//
+//bool operator==( Date& x1,const  Date& x2)//比较相等
+//{
+//	return x1.GetYear() == x2._year
+//		&& x1._month == x2._month
+//		&& x1._day == x2._day;
+//}
+//
+//
+//int operator-(Date x1, Date x2)//相减
+//{
+//
+//}
+//int main()
+//{
+//	Date d1(2022, 8, 29);
+//	Date d2(2022, 8, 29);
+//
+//	return 0;
+//}
+
 class Date
 {
 public:
@@ -443,48 +490,41 @@ public:
 		_month = month;
 		_day = day;
 	}
-	Date(const Date& d)
+	bool operator==(const  Date& x)//比较相等
 	{
-		_year = d._year;
-		_month = d._month;
-		_day = d._day;
+		return _year == x._year
+			&& _month == x._month
+			&& _day == x._day;
 	}
-
-	void printf()
+	int GetMonthDay(int year, int month)
 	{
-		cout << _year << "/" << _month << "/" << _day << endl;
+		 static int day[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+		return day[month];
 	}
-//private:
+	Date operator+(int day)//日期加天数
+	{
+		_day = _day + day;
+		if(_month=={1,3,5,7,8,10,12})
+	}
+private:
 	int _year;//声明
 	int _month;
 	int _day;
 };
-struct Date_
-{
-	int _year;
-	int _month;
-	int _day;
-};
 
-bool operator==(const Date& x1,const  Date& x2)//比较相等
-{
-	return x1._year == x2._year
-		&& x1._month == x2._month
-		&& x1._day == x2._day;
-}
 
-int operator-(Date x1, Date x2)//相减
-{
 
-}
 int main()
 {
 	Date d1(2022, 8, 29);
 	Date d2(2022, 8, 29);
 
-	
-	
+	d1 == d2;//运行比较相等函数
+	cout << (d1 == d2) << endl;
+	cout << d1.operator==(d2);
 
+	d1 + 100;//日期加天数
 
 	return 0;
 }
+
