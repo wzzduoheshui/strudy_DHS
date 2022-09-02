@@ -480,86 +480,112 @@ using namespace std;
 //
 //	return 0;
 //}
+//
+//class Date
+//{
+//public:
+//	Date(int year = 0, int month = 0, int day = 0)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	bool operator==(const  Date& x)//比较相等
+//	{
+//		return _year == x._year
+//			&& _month == x._month
+//			&& _day == x._day;
+//	}
+//	int GetMonthDay(int year, int month)
+//	{
+//		static int day[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+//		if (month == 2 && ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)))
+//		{
+//			return 29;
+//		}
+//		else
+//		{
+//			return day[month];
+//		}
+//	}
+//	Date operator+=(int day)//日期加天数
+//	{
+//		_day = _day + day;
+//		while (_day > GetMonthDay(_year, _month))
+//		{
+//			_day -= GetMonthDay(_year, _month);
+//			_month++;
+//			if (_month == 13)
+//			{
+//				_month = 1;
+//				_year++;
+//			}
+//		}
+//		return *this;
+//	}
+//	Date operator+(int day)//日期加天数
+//	{
+//		Date ret(*this);
+//		ret._day = ret._day + day;
+//		while (ret._day > GetMonthDay(ret._year, ret._month))
+//		{
+//			ret._day -= GetMonthDay(ret._year, ret._month);
+//			ret._month++;
+//			if (ret._month == 13)
+//			{
+//				ret._month = 1;
+//				ret._year++;
+//			}
+//		}
+//		return ret;
+//	}
+//	void print()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+//private:
+//	int _year;//声明
+//	int _month;
+//	int _day;
+//};
+//
+//
+//
+//int main()
+//{
+//	Date d1(2022, 8, 29);
+//	Date d2(2022, 8, 29);
+//	d1 + 100;//日期加天数
+//	(d1 + 100).print();
+//	d1.print();
+//	(d1 += 100).print();
+//	d1.print();
+//	return 0;
+//}
 
-class Date
+class A
 {
 public:
-	Date(int year = 0, int month = 0, int day = 0)
+	A(int a = 0)
+		:_a(a)
 	{
-		_year = year;
-		_month = month;
-		_day = day;
+		cout << "A(int a=0)->"<< _a << endl;
 	}
-	bool operator==(const  Date& x)//比较相等
+	~A()
 	{
-		return _year == x._year
-			&& _month == x._month
-			&& _day == x._day;
-	}
-	int GetMonthDay(int year, int month)
-	{
-		static int day[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
-		if (month == 2 && ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)))
-		{
-			return 29;
-		}
-		else
-		{
-			return day[month];
-		}
-	}
-	Date operator+=(int day)//日期加天数
-	{
-		_day = _day + day;
-		while (_day > GetMonthDay(_year, _month))
-		{
-			_day -= GetMonthDay(_year, _month);
-			_month++;
-			if (_month == 13)
-			{
-				_month = 1;
-				_year++;
-			}
-		}
-		return *this;
-	}
-	Date operator+(int day)//日期加天数
-	{
-		Date ret(*this);
-		ret._day = ret._day + day;
-		while (ret._day > GetMonthDay(ret._year, ret._month))
-		{
-			ret._day -= GetMonthDay(ret._year, ret._month);
-			ret._month++;
-			if (ret._month == 13)
-			{
-				ret._month = 1;
-				ret._year++;
-			}
-		}
-		return ret;
-	}
-	void print()
-	{
-		cout << _year << "/" << _month << "/" << _day << endl;
+		cout << "~A()->"<< _a << endl;
 	}
 private:
-	int _year;//声明
-	int _month;
-	int _day;
+	int _a;
 };
 
-
+static A aa3(3);
 
 int main()
 {
-	Date d1(2022, 8, 29);
-	Date d2(2022, 8, 29);
-	d1 + 100;//日期加天数
-	(d1 + 100).print();
-	d1.print();
-	(d1 += 100).print();
-	d1.print();
+	static A aa0(0);
+	A aa1(1);
+	A aa2(2);
+
 	return 0;
 }
-
