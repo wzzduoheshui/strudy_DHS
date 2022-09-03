@@ -563,29 +563,52 @@ using namespace std;
 //	return 0;
 //}
 
-class A
-{
-public:
-	A(int a = 0)
-		:_a(a)
-	{
-		cout << "A(int a=0)->"<< _a << endl;
-	}
-	~A()
-	{
-		cout << "~A()->"<< _a << endl;
-	}
-private:
-	int _a;
-};
-
-static A aa3(3);
-
-int main()
-{
-	static A aa0(0);
-	A aa1(1);
-	A aa2(2);
-
-	return 0;
-}
+//class A
+//{
+//public:
+//	A(int a = 0)
+//		:_a(a)
+//	{
+//		cout << "A(int a=0)->"<< _a << endl;
+//	}
+//	~A()
+//	{
+//		cout << "~A()->"<< _a << endl;
+//	}
+//private:
+//	int _a;
+//};
+//
+//static A aa3(3);
+//
+//int main()
+//{
+//	static A aa0(0);
+//	A aa1(1);
+//	A aa2(2);
+//
+//	return 0;
+//}
+//
+//class Date
+//{
+//public:
+//	Date(int year=100,int month=100,int day=100)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	void print()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+//	int _year = 0;
+//	int _month = 0;
+//	int _day = 0;
+//};
+//int main()
+//{
+//	Date date(2022,8,10);
+//	date.print();
+//}
