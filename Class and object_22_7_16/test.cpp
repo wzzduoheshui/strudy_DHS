@@ -590,46 +590,46 @@ using namespace std;
 //	return 0;
 //}
 //
-class Date
-{
-public:
-	Date(int year=100,int month=100,int day=100)
-	{
-		_year = year;
-		_month = month;
-		_day = day;
-	}
-	void print()
-	{
-		cout << _year << "/" << _month << "/" << _day << endl;
-	}
-	bool operator==(const Date& x2)
-	{
-		return this->_year == x2._year &&
-			this->_month == x2._month &&
-			this->_day == x2._day;
-	}
-	int BuyDays(int month,int year)
-	{
-		int monthday[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
-		if ((year))
-		{
-			return 29;
-		}
-	}
-	Date operator+=(int x)
-	{
-		this->_day += x;
-		if(this->_day>)
-	}
-	int _year = 0;
-	int _month = 0;
-	int _day = 0;
-};
-int main()
-{
-	Date date(2022,8,10);
-	Date today(2022, 8, 10);
-	cout << (date == today) << endl;
-	date.print();
-}
+//class Date
+//{
+//public:
+//	Date(int year=100,int month=100,int day=100)
+//	{
+//		_year = year;
+//		_month = month;
+//		_day = day;
+//	}
+//	void print()
+//	{
+//		cout << _year << "/" << _month << "/" << _day << endl;
+//	}
+//	bool operator==(const Date& x2)
+//	{
+//		return this->_year == x2._year &&
+//			this->_month == x2._month &&
+//			this->_day == x2._day;
+//	}
+//	int BuyDays(int month,int year)
+//	{
+//		int monthday[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+//		if ((year))
+//		{
+//			return 29;
+//		}
+//	}
+//	Date operator+=(int x)
+//	{
+//		this->_day += x;
+//		if(this->_day>)
+//	}
+//	int _year = 0;
+//	int _month = 0;
+//	int _day = 0;
+//};
+//int main()
+//{
+//	Date date(2022,8,10);
+//	Date today(2022, 8, 10);
+//	cout << (date == today) << endl;
+//	date.print();
+//}
