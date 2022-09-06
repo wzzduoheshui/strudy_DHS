@@ -719,3 +719,56 @@ using namespace std;
 //	func4();
 //	return 0;
 //}
+
+
+
+//class A
+//{
+//public:
+//	A(int a = 0)
+//	{
+//		_a = a;
+//		cout << "A(int a = 0) ->" << _a << endl;
+//	}
+//	A(const A& aa)
+//	{
+//		_a = aa._a;
+//		cout << "A(const A& aa) ->" << _a << endl;
+//	}
+//	~A()
+//	{
+//		cout << "~A() ->" << _a << endl;
+//	}
+//private:
+//	int _a;
+//};
+//
+//void func1(A aa)
+//{}
+//
+//void func2(A& aa)
+//{}
+//
+//A func3()
+//{
+//	static A aa;
+//	return aa;
+//}
+//
+//A& func4()
+//{
+//	static A aa;
+//	return aa;
+//}
+//int main()
+//{
+//	A aa1(1);
+//	//A aa2(aa1);
+//	func1(aa1);
+//	func2(aa1);
+//	cout << endl;
+//	func3();
+//	cout << endl;
+//	func4();
+//	return 0;
+//}
