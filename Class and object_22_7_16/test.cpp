@@ -8,7 +8,7 @@ using namespace std;
 //#define ADD_a(a,b) ((a)+(b))
 //
 //int ADD(int a, int b)
-//{
+//{ 
 //	return a + b;
 //}
 //
@@ -632,4 +632,90 @@ using namespace std;
 //	Date today(2022, 8, 10);
 //	cout << (date == today) << endl;
 //	date.print();
+//}
+
+//class A
+//{
+//public:
+//	A(int a = 0)
+//		:_a(a)
+//	{
+//		cout << "A(int a = 0) ->" << _a << endl;
+//	}
+//	~A()
+//	{
+//		cout << "~A() ->" << _a << endl;
+//	}
+//private:
+//	int _a;
+//};
+//
+//A aa3(3);
+//
+//void f()
+//{
+//	static A aa0(0);
+//	A aa1(1);
+//	A aa2(2);
+//	static A aa4(4);
+//}
+//
+//int main()
+//{
+//	f();
+//	f();
+//
+//	return 0;
+//}
+
+
+//class A
+//{
+//public:
+//	A(int a = 0)
+//	{
+//		_a = a;
+//		cout << "A(int a = 0) ->" << _a << endl;
+//	}
+//	A(const A& aa)
+//	{
+//		_a = aa._a;
+//		cout << "A(const A& aa) ->" << _a << endl;
+//	}
+//	~A()
+//	{
+//		cout << "~A() ->" << _a << endl;
+//	}
+//private:
+//	int _a;
+//};
+//
+//void func1(A aa)
+//{}
+//
+//void func2(A& aa)
+//{}
+//
+//A func3()
+//{
+//	static A aa;
+//	return aa;
+//}
+//
+//A& func4()
+//{
+//	static A aa;
+//	return aa;
+//}
+//int main()
+//{
+//	A aa1(1);
+//	//A aa2(aa1);
+//	func1(aa1);
+//	func2(aa1);
+//	cout << endl;
+//	func3();
+//	cout << endl;
+//	func4();
+//	return 0;
 //}
