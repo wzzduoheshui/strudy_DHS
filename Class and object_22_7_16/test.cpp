@@ -772,3 +772,62 @@ using namespace std;
 //	func4();
 //	return 0;
 //}
+
+
+
+A A::operator+(int day)
+{
+	_day += day;
+	if(GetMonthDay(_year,_month))
+}
+
+class A
+{
+public:
+	A(int year = 1, int month = 1, int day = 1)
+	{
+		_year = year;
+		_month = year;
+		_day = day;
+	}
+
+	void print()
+	{
+		cout << _year << "/" << _month << "/" << _day << endl;
+	}
+	bool operator==(const A a)
+	{
+		return _year == a._year &&
+			_month == a._month &&
+			_day == a._day;
+	}
+	A operator+(int day);
+	int GetMonthDay(int year, int month)
+	{
+		static int arr[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+		if ((month == 2) &&
+			(
+				((year % 4 == 0) && (year % 100 != 0)) ||
+				(year % 400 == 0)))
+		{
+			return 28;
+		}
+		else
+		{
+			return 29;
+		}
+	}
+private:
+	int _year;
+	int _month;
+	int _day;
+};
+
+
+
+
+int main()
+{
+	A aa(2022, 9, 7);
+	aa.print();
+}
