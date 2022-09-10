@@ -778,7 +778,17 @@ using namespace std;
 A A::operator+(int day)
 {
 	_day += day;
-	if(GetMonthDay(_year,_month))
+	if (GetMonthDay(_year, _month) < _day)
+	{
+		_day - GetMonthDay(_year, _month);
+		_month++;
+		if (_month > 12)
+		{
+			_month = 1;
+			_year++;
+		}
+		
+	}
 }
 
 class A
@@ -787,7 +797,7 @@ public:
 	A(int year = 1, int month = 1, int day = 1)
 	{
 		_year = year;
-		_month = year;
+		_month = month;
 		_day = day;
 	}
 
@@ -823,11 +833,10 @@ private:
 	int _day;
 };
 
-
-
-
 int main()
 {
 	A aa(2022, 9, 7);
 	aa.print();
+	A a1(2000, 9,1);
+	a1.print();
 }
