@@ -25,17 +25,6 @@ public:
 		}
 		return day;
 	}
-	//Date& operator=(const Date& d)
-	//{
-	//	if (this != &d)
-	//	{
-	//		_year = d._year;
-	//		_month = d._month;
-	//		_day = d._day;
-	//	}
-
-	//	return *this;
-	//}
 	bool operator==(const Date& d);
 	bool operator!=(const Date& d);
 	bool operator>(const Date& d);
@@ -43,10 +32,14 @@ public:
 	
 	Date operator+(int day);
 	Date& operator+=(int day);
+	Date& operator-=(int day);
+	Date operator-(int day);
 
+
+	//int operator-(Date date);
 	void Print()
 	{
-		cout << this->_day << "/" << this->_month << "/" << this->_year << endl;
+		cout << this->_year << "/" << this->_month << "/" << this->_day << endl;
 	}
 
 

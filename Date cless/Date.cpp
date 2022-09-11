@@ -55,3 +55,38 @@ Date Date::operator+(int day)
 	return ret += day;
 
 }
+
+Date& Date::operator-=(int day)
+{
+	if (_day >= day)
+	{
+		_day -= day;
+		return *this;
+	}
+	while (_day < day)
+	{
+		day -= _day;
+		if (_month == 1)
+		{
+			_year--;
+			_month = 12;
+		}
+		else
+		{
+			_month--;
+		}
+		_day = GetMonthDay(_year, _month);
+	}
+	return *this;
+}
+
+Date Date::operator-(int day)
+{
+	Date date(*this);
+	return (date - day);
+}
+
+//int Date::operator-(Date date)
+//{
+//
+//}
