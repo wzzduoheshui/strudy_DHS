@@ -1,5 +1,2 @@
 ﻿  Date.cpp
-  text.cpp
-  正在生成代码...
-D:\get-text\bita\Date cless\Date.cpp(87): warning C4717: “Date::operator-”: 如递归所有控件路径，函数将导致运行时堆栈溢出
   Date cless.vcxproj -> D:\get-text\bita\Date cless\Debug\Date cless.exe

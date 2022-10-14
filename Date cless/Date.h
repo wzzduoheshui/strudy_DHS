@@ -8,7 +8,7 @@ class Date
 {
 public:
 	//构造函数会频繁调用，所以直接放在类里面定义为inline
-	Date(int year = 1, int month = 01, int day = 01)
+	Date(int year = 1, int month = 1, int day = 1)
 	{
 		_year = year;
 		_month = month;
@@ -36,10 +36,11 @@ public:
 	Date operator-(int day);
 
 
-	//int operator-(Date date);
+	int operator-(Date date);
 	void Print()
 	{
 		cout << this->_year << "/" << this->_month << "/" << this->_day << endl;
+		//cout << 1 << endl;
 	}
 
 

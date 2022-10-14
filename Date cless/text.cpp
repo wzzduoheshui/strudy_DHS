@@ -6,8 +6,11 @@ void TextDate1()
 {
 	Date d1(2022, 9, 6);
 	d1.Print();
-	d1 -= 100;
-	d1.Print();
+	(d1 + 1).Print();
+	//d1.Print();
+
+	//d1 -= 100;
+	//d1.Print();
 	//Date d2(d1);//使用默认拷贝构造
 
 	//Date d3(2022, 8, 24);
