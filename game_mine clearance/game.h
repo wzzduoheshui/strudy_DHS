@@ -21,3 +21,6 @@ void print_show(char arr[Rows][Cols], int row, int col);
 
 //玩家输入坐标与雷区做比较
 void play_board(char arr1[Rows][Cols], char arr2[Row][Col], int row, int col);
+
+//统计周围有几个雷方法（这个可以放在game.c中）
+int get_mine(char arr[Rows][Cols], int x, int y);

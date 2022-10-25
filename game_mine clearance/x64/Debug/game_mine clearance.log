@@ -1,8 +1,4 @@
 ﻿  game.c
 D:\get-text\bita\game_mine clearance\game.c(137,46): warning C4028: 形参 2 与声明不同
 D:\get-text\bita\game_mine clearance\game.c(151,13): warning C4098: “play_board”:“void”函数返回值
-  test.c
-D:\get-text\bita\game_mine clearance\test.c(29,23): warning C4048: “char (*)[9]”和“char [11][11]”数组的下标不同
-D:\get-text\bita\game_mine clearance\test.c(15,6): warning C4101: “str”: 未引用的局部变量
-  正在生成代码...
   game_mine clearance.vcxproj -> D:\get-text\bita\game_mine clearance\x64\Debug\game_mine clearance.exe

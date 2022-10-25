@@ -115,27 +115,7 @@
 ////	return 0;
 ////}
 //
-//#include <iostream>
-//
-//using namespace std;
-//
-//class A
-//{
-//public:
-//	A(int a)
-//	{
-//
-//	}
-//private:
-//	static int num;
-//};
-//
-//int main()
-//{
-//	A a1(10);
-//
-//	return 0;
-//}
+
 //
 //
 //#include <stdio.h>
@@ -154,3 +134,73 @@
 //}
 
 
+
+//#include <iostream>
+//
+//using namespace std;
+//
+//class A
+//{
+//public:
+//	A(int a)
+//		:_a(a)
+//	{
+//		_num++;
+//	}
+////private:
+//	int _a;//放在所属的类域
+//	static int _num;//放在静态区
+//};
+//
+//int A::_num = 0;
+//
+//int main()
+//{
+//	A a1(10);
+//
+//	cout << a1._num << endl;
+//	cout << A::_num << endl;
+//
+//	return 0;
+//}
+
+
+
+#include <iostream>
+
+using namespace std;
+
+class A
+{
+public:
+	A(int a)
+		:_a(a)
+	{
+		_num++;
+	}
+	A(const A& a)
+		:_a(a._a)
+	{
+		_num++;
+	}
+	static int Getnumber()
+	{
+		return _num;
+	}
+private:
+	int _a;//放在所属的类域
+	static int _num;//放在静态区
+};
+
+int A::_num = 0;
+
+int main()
+{
+	A a1(10);
+
+	cout << a1.Getnumber() << endl;
+	cout << A(10).Getnumber() << endl;
+	cout << A.Getnumber() << endl;
+
+	return 0;
+}

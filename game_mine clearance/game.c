@@ -9,9 +9,9 @@ void init_board(char arr[Rows][Cols], int rows, int cols, char str)
 {
 	int r = 0;
 	int c = 0;
-	for (r = 0; r < Rows; r++)
+	for (r = 0; r < rows; r++)
 	{
-		for (c = 0; c < Cols; c++)
+		for (c = 0; c < cols; c++)
 		{
 			arr[r][c] = str;
 		}
@@ -28,8 +28,8 @@ void mine_board(char arr[Rows][Cols],int row,int col)
 	int i = 0;//布置过的雷的数量
 	for (i = 0;i<10;)//注意这里是个死循环
 	{
-		x = rand() % Row;//雷的坐标位置
-		y = rand() % Col;
+		x = rand() % row;//雷的坐标位置
+		y = rand() % col;
 		if (arr[x+1][y+1] == '0')
 		{
 			arr[x+1][y+1] = '1';
@@ -154,7 +154,7 @@ void play_board(char arr1 [Rows][Cols], char arr2 [Rows][Cols], int row, int col
 			{
 				system("cls");//清理屏幕
 				//作弊版本
-				//print_show(arr1, Rows, Cols);
+				print_show(arr1, Rows, Cols);
 				printf("该位置不是雷，游戏继续：\n");
 				//统计周围有几个雷
 				//雷的个数
