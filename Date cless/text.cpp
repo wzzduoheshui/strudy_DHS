@@ -165,42 +165,131 @@
 //}
 
 
+//
+//#include <iostream>
+//
+//using namespace std;
+//
+//class A
+//{
+//public:
+//	static A Getclass()
+//	{
+//		A so;
+//		return so;
+//	}
+//private:
+//	A(int a = 0)
+//		:_a(a)
+//	{
+//	}
+//	static int Getnumber()
+//	{
+//		return _num;
+//	}
+//private:
+//	int _a;
+//	static int _num;
+//};
+//
+//int A::_num = 0;
+//
+//int main()
+//{
+//	A a1 = A::Getclass();
+//
+//
+//	//A a1(10);
+//
+//	//cout << a1.Getnumber() << endl;
+//	//cout << A(10).Getnumber() << endl;
+//	//cout << A::Getnumber() << endl;
+//
+//	return 0;
+//}
 
-#include <iostream>
+//#include <iostream>
+//using namespace std;
+//
+////内部类
+//class A
+//{
+//public:
+//	class B//B就是A的内部类（1.收到A的类域限制，访问限定符。2.）
+//	{
+//	public:
+//		B(int b)
+//			:_b(b)
+//		{
+//		}
+//		void print(const B& b);
+//	private:
+//		int _b;
+//	};
+//	A(int a, int b)
+//		:_a(a)
+//	{
+//		B b1(b);
+//	}
+//	 static void print(const A& a);
+//	
+//private:
+//	int _a;
+//	static int _a2;
+//};
+//
+//int A::_a2 = 0;
+//
+//void A::print(const A& a)
+//{
+//	cout << "A->" << a._a << endl;
+//}
+//
+//void A::B::print(const B& b)
+//{
+//	cout << "_a->" << A::print() << "_a2->"
+//}
+//int main()
+//{
+//	cout << sizeof(A) << endl;
+//
+//	A a1(1, 1);
+//	A::B b(1);
+//	b.print(b);
+//	cout << sizeof(A) << endl;
+//	return 0;
+//}
 
-using namespace std;
-
-class A
-{
-public:
-	A(int a)
-		:_a(a)
-	{
-		_num++;
-	}
-	A(const A& a)
-		:_a(a._a)
-	{
-		_num++;
-	}
-	static int Getnumber()
-	{
-		return _num;
-	}
-private:
-	int _a;//放在所属的类域
-	static int _num;//放在静态区
-};
-
-int A::_num = 0;
-
-int main()
-{
-	A a1(10);
-
-	cout << a1.Getnumber() << endl;
-	cout << A(10).Getnumber() << endl;
-	cout << A.Getnumber() << endl;
-
-	return 0;
-}
+//#include <iostream>
+//using namespace std;
+//
+//class W
+//{
+//public:
+//	W()
+//	{
+//		cout << "W()" << endl;
+//	}
+//	W(const W& w)
+//	{
+//		cout << "W(const W& w)" << endl;
+//	}
+//private:
+//	int _w = 0;
+//};
+//
+//W func1()
+//{
+//	W ret;
+//	return ret;
+//}
+//
+//int main()
+//{
+//	func1();//1次构造，1次拷贝
+//	cout << endl << endl;
+//	W w1 = func1();//1次构造，2次拷贝--(编译器优化)-->1次构造，1次拷贝
+//	cout << endl << endl;
+//
+//	return 0;
+//}
