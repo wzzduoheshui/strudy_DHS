@@ -95,6 +95,7 @@ SLTNode* SListFind(SLTNode* phead, SLTDateType x)
 
 void SListInsertAfter(SLTNode* pos, SLTDateType x)
 {
+	assert(pos);
 	SLTNode* cur = BuySListNode(x);
 	cur->next = pos->next;
 	pos->next = cur;

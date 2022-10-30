@@ -1,5 +1,8 @@
-﻿  test.c
-D:\get-text\bita\Linked List\test.c(55,22): warning C4133: “函数”: 从“SLTDateType *”到“SLTNode *”的类型不兼容
-D:\get-text\bita\Linked List\test.c(58,21): warning C4133: “函数”: 从“SLTDateType *”到“SLTNode *”的类型不兼容
-D:\get-text\bita\Linked List\test.c(52,1): warning C4133: “初始化”: 从“SLTNode *”到“SLTDateType *”的类型不兼容
+﻿  22_5_12.c
+D:\get-text\bita\Linked List\22_5_12.c(12,16): warning C4133: “return”: 从“SLTNode *”到“SLTDateType *”的类型不兼容
+D:\get-text\bita\Linked List\22_5_12.c(28,1): warning C4133: “初始化”: 从“SLTDateType *”到“SLTNode *”的类型不兼容
+D:\get-text\bita\Linked List\22_5_12.c(48,1): warning C4133: “初始化”: 从“SLTDateType *”到“SLTNode *”的类型不兼容
+D:\get-text\bita\Linked List\22_5_12.c(99,1): warning C4133: “初始化”: 从“SLTDateType *”到“SLTNode *”的类型不兼容
+D:\get-text\bita\Linked List\22_5_12.c(115,22): warning C4047: “函数”:“SLTNode **”与“SLTNode *”的间接级别不同
+D:\get-text\bita\Linked List\22_5_12.c(115,17): warning C4024: “SListPopFront”: 形参和实参 1 的类型不同
   data structure22_5_12.vcxproj -> D:\get-text\bita\Linked List\Debug\data structure22_5_12.exe

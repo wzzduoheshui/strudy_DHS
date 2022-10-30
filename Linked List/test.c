@@ -28,11 +28,11 @@ void TestSList1()
 
 	SListPrint(n1);//¥Ú”°
 
-	SListPushBack(&n1, 5);
-	SListPushBack(&n1, 6);
-	SListPushBack(&n1, 7);
-	SListPushBack(&n1, 8);
-	SListPrint(n1);
+	//SListPushBack(&n1, 5);
+	//SListPushBack(&n1, 6);
+	//SListPushBack(&n1, 7);
+	//SListPushBack(&n1, 8);
+	//SListPrint(n1);
 }
 
 void TestSList2()
@@ -65,16 +65,27 @@ void TestSList2()
 
 }
 
+void Test3()
+{
+
+	SLTNode* n1 = NULL;
+	SListInsertAfter(n1, 1);
+	SListPrint(n1);
+
+	return 0;
+}
+
 int main()
 {
+	Test3();
 	//TestSList1();
 	//TestSList2();
-	SLTNode* n1 = NULL;
-	SListPushFront(&n1, 1);
-	SListPushFront(&n1, 2);
-	SListPushFront(&n1, 3);
-	SListPushFront(&n1, 3);
-	SListPushFront(&n1, 3);
-	SListPrint(n1);
+	//SLTNode* n1 = NULL;
+	//SListPushFront(&n1, 1);
+	//SListPushFront(&n1, 2);
+	//SListPushFront(&n1, 3);
+	//SListPushFront(&n1, 3);
+	//SListPushFront(&n1, 3);
+	//SListPrint(n1);
 	return 0;
 }
