@@ -24,9 +24,80 @@
 //
 //	return 0;
 //}
-#include <iostream>
-#include <stdio.h>
+//#include <iostream>
+//#include <stdio.h>
+//
+//using namespace std;
+//
+//class A
+//{
+//public:
+//	A(int a = 0)
+//		:_a(a)
+//	{
+//		cout << "A（int a = 0）-->" << this << endl;
+//	}
+//	A(const A& a)
+//	{
+//		cout << "A(const A& a)-->" << this << endl;
+//	}
+//	~A()
+//	{
+//		cout << "~A-->" << this << endl;
+//	}
+//private:
+//	int _a = 0;
+//};
+//
+//int main()
+//{
+//	//A* ptr = (A*)malloc(sizeof(A));
+//	//A* ptr2 = new A;
+//	//A* ptr3 = new A(10);
+//	
+//	//free(ptr);
+//	//delete ptr2;
+//
+//	//A a1(1);
+//	//A a2(2);
+//	//A(3);
+//	//cout << endl << endl;
+//
+//
+//	//A* ptr4 = new A[2]{ 1,2 };//直接调用构造函数(会涉及到单参数的隐式类型的转换)
+//	//A* ptr5 = new A[2]{ A(a1),A(a2) };//调用拷贝构造函数
+//	//A* ptr6 = new A[2]{ A(1),A(2) };//调用构造函数，再调用拷贝构造----》直接调用构造函数
+//	//
+//	//delete[] ptr4;
+//	//delete[] ptr5;
+//
+//	return 0;
+//}
 
+//#include<iostream>
+//#include<assert.h>
+//using namespace std;
+//int main(){
+//	int i = 0;
+//	try 
+//	{
+//		while (1)
+//		{
+//			char* p2 = new char[1024u * 1024u ];
+//			printf("%p-->%d \n", p2, i);
+//			i++;
+//		}
+//	}
+//	catch (exception& e)
+//	{
+//		cout << e.what() << endl;
+//	}
+//	return 0;
+//}
+
+
+#include<iostream>
+#include<assert.h>
 using namespace std;
 
 class A
@@ -34,42 +105,27 @@ class A
 public:
 	A(int a = 0)
 		:_a(a)
-	{
-		cout << "A（int a = 0）-->" << this << endl;
-	}
+	{}
 	A(const A& a)
 	{
-		cout << "A(const A& a)-->" << this << endl;
+		_a = a._a;
 	}
 	~A()
 	{
-		cout << "~A-->" << this << endl;
+		this->_a = 0;
+	}
+	void print(const A& a)
+	{
+		cout << a._a << endl;
 	}
 private:
 	int _a = 0;
 };
 
-int main()
-{
-	//A* ptr = (A*)malloc(sizeof(A));
-	//A* ptr2 = new A;
-	//A* ptr3 = new A(10);
+int main() {
+	A* a = new A(10);
 	
-	//free(ptr);
-	//delete ptr2;
-
-	A a1(1);
-	A a2(2);
-	A(3);
-	cout << endl << endl;
-
-
-	A* ptr4 = new A[2]{ 1,2 };//直接调用构造函数
-	A* ptr5 = new A[2]{ A(a1),A(a2) };//调用拷贝构造函数
-	A* ptr6 = new A[2]{ A(1),A(2) };//调用构造函数，再调用拷贝构造----》直接调用构造函数
 	
-	delete[] ptr4;
-	delete[] ptr5;
-
+	//(*a).print(*a);
 	return 0;
 }
