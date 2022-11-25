@@ -96,36 +96,75 @@
 //}
 
 
-#include<iostream>
-#include<assert.h>
+//#include<iostream>
+//#include<assert.h>
+//using namespace std;
+//
+//class A
+//{
+//public:
+//	A(int a = 0)
+//		:_a(a)
+//	{}
+//	A(const A& a)
+//	{
+//		_a = a._a;
+//	}
+//	~A()
+//	{
+//		this->_a = 0;
+//	}
+//	void print(const A& a)
+//	{
+//		cout << a._a << endl;
+//	}
+//private:
+//	int _a = 0;
+//};
+//
+//int main() {
+//	A* a = new A(10);
+//	
+//	
+//	//(*a).print(*a);
+//	return 0;
+//}
+
+
+#include <iostream>
 using namespace std;
 
-class A
+struct ListNode
 {
-public:
-	A(int a = 0)
-		:_a(a)
-	{}
-	A(const A& a)
-	{
-		_a = a._a;
-	}
-	~A()
-	{
-		this->_a = 0;
-	}
-	void print(const A& a)
-	{
-		cout << a._a << endl;
-	}
-private:
 	int _a = 0;
+	ListNode* _next;
+	static allocator<ListNode> alloc;
+
+	void* operator new(size_t n)
+	{
+		cout << "从内存池中开辟" << endl;
+		void* obj = alloc.allocate(1);
+		return obj;
+	}
+	void operator delete(void* ptr)
+	{
+		cout << "从内存池中删除" << endl;
+		alloc.deallocate((ListNode*)ptr, 1);
+	}
+
+	struct ListNode(int val)
+		:_a(val)
+		, _next(nullptr)
+	{
+
+	}
 };
 
-int main() {
-	A* a = new A(10);
-	
-	
-	//(*a).print(*a);
+int main()
+{
+	ListNode* L1 = new ListNode(1);
+	ListNode* L2 = new ListNode(2);
+	ListNode* L3 = new ListNode(3);
+
 	return 0;
 }

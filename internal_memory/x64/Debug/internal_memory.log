@@ -1,2 +1,2 @@
-﻿  22_10_29.cpp
-  internal_memory.vcxproj -> D:\get-text\bita\internal_memory\x64\Debug\internal_memory.exe
+﻿22_10_29.obj : error LNK2001: 无法解析的外部符号 "public: static class std::allocator<struct ListNode> ListNode::alloc" (?alloc@ListNode@@2V?$allocator@UListNode@@@std@@A)
+D:\get-text\bita\internal_memory\x64\Debug\internal_memory.exe : fatal error LNK1120: 1 个无法解析的外部命令
