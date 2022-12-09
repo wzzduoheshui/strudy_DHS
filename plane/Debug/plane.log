@@ -1,0 +1,26 @@
+﻿  main.cpp
+D:\linux_study-master\linux_study-master\plane_system\system.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\linux_study-master\linux_study-master\plane_system\system.h(27): fatal error C1075: “{”: 未找到匹配令牌
+  system.cpp
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\linux_study-master\linux_study-master\plane_system\system.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(3,9): error C2086: “WaitQueue::Flight *WaitQueue::Flight::pFlight”: 重定义
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(7,6): error C2535: “void WaitQueue::Flight::InitFlight(void)”: 已经定义或声明成员函数
+D:\linux_study-master\linux_study-master\plane_system\system.h(39): message : 参见“WaitQueue::Flight::InitFlight”的声明
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(44,6): error C2535: “void WaitQueue::Flight::InitBookingList(BookingNode *&)”: 已经定义或声明成员函数
+D:\linux_study-master\linux_study-master\plane_system\system.h(40): message : 参见“WaitQueue::Flight::InitBookingList”的声明
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(51,6): error C2535: “void WaitQueue::Flight::InitWaitQueue(WaitQueue *&)”: 已经定义或声明成员函数
+D:\linux_study-master\linux_study-master\plane_system\system.h(41): message : 参见“WaitQueue::Flight::InitWaitQueue”的声明
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(58,6): error C2535: “void WaitQueue::Flight::Menu(void)”: 已经定义或声明成员函数
+D:\linux_study-master\linux_study-master\plane_system\system.h(43): message : 参见“WaitQueue::Flight::Menu”的声明
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(108,6): error C2535: “void WaitQueue::Flight::QueryModule(void)”: 已经定义或声明成员函数
+D:\linux_study-master\linux_study-master\plane_system\system.h(45): message : 参见“WaitQueue::Flight::QueryModule”的声明
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(151,6): error C2535: “void WaitQueue::Flight::DestinationToPrintFlight(void)”: 已经定义或声明成员函数
+D:\linux_study-master\linux_study-master\plane_system\system.h(46): message : 参见“WaitQueue::Flight::DestinationToPrintFlight”的声明
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(153,12): error C2001: 常量中有换行符
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(187,12): error C2001: 常量中有换行符
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(242,12): error C2001: 常量中有换行符
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(395,12): error C2001: 常量中有换行符
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(407,20): error C2001: 常量中有换行符
+D:\linux_study-master\linux_study-master\plane_system\system.cpp(407): fatal error C1075: “{”: 未找到匹配令牌
+  正在生成代码...
