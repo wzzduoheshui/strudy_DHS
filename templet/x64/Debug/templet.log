@@ -1,0 +1,7 @@
+﻿  templet.cpp
+D:\get-text\bita\templet\templet.cpp(251,8): warning C4244: “初始化”: 从“T2”转换到“int”，可能丢失数据
+          with
+          [
+              T2=double
+          ]
+  templet.vcxproj -> D:\get-text\bita\templet\x64\Debug\templet.exe
