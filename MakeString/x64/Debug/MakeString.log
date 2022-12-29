@@ -1,0 +1,3 @@
+﻿  mkstring.cpp
+D:\get-text\bita\MakeString\mkstring.h(33): warning C4172: 返回局部变量或临时变量的地址: tmp
+  MakeString.vcxproj -> D:\get-text\bita\MakeString\x64\Debug\MakeString.exe
