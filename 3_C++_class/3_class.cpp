@@ -9,4 +9,5 @@ int main()
 	text();
 	cout << "main():" << a << "," << &a << endl;
 	return 0;
+
 }
