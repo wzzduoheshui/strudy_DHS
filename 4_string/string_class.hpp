@@ -15,13 +15,17 @@ namespace MyString
 		friend ostream& operator>>(ostream& cin, const mstr& str);//cin
 
 		mstr(const char* str = "")//构造
+			:_str(nullptr)
+			,_capacity(0)
+			,_size(0)
 		{
 			_size = strlen(str);
 			_capacity = _size;
 			cout << "mstr(const char* str = "")" << str << "size:" << _size << endl;
-			_str = new char[_capacity + 1];
-			memcpy(_str, str, _size);
-			_str[_size + 1] = '\0';
+			_str = new char[_capacity + 20];//开了13个空间0-12
+			strcpy(_str, str);
+			//memcpy(_str, str, _size);
+			//_str[_size] = '\0';
 		}
 
 		//mstr(const mstr& str)//拷贝构造
