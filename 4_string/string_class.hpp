@@ -57,7 +57,7 @@ namespace MyString
 			_size = _capacity = 0;
 		}
 
-		void operator+=(const mstr& str)//+=
+		mstr operator+=(const mstr& str)//+=
 		{
 			mstr new_str;
 			new_str._capacity = str._capacity + this->_capacity + 1;
@@ -71,6 +71,58 @@ namespace MyString
 			}
 			this->swap(new_str);
 			//cout << endl << new_str << endl;
+		}
+
+		void reserve(size_t n)//À©ÈÝ
+		{
+			if (n > this->_capacity)
+			{
+				//char* tmp = new char[n + 1];
+				//strcpy(tmp, _str);
+				//delete[] _str;
+				//this->_str = tmp;
+				this->_capacity = n;
+			}
+		}
+
+		void resize(const size_t& n, const char& ch = ' ')
+		{
+			if (n > this->_capacity)
+			{
+				reserve(_capacity == 0 ? 4 : _capacity * 2);
+			}
+			if (n > this->_size)
+			{
+				while (this->_size < n)
+				{
+					push_back(ch);
+				}
+			}
+			else if (n < this->_size)
+			{
+				while(this->_size > n)
+				{
+					pop_back();
+				}
+			}
+		}
+
+		void pop_back()
+		{
+			if (this->_size > 0)
+			{
+				this->_str[this->_size--] = '\0';
+			}
+		}
+
+		void push_back(const char& ch)
+		{
+			if (this->_size + 1 >= this->_capacity)
+			{
+				reserve(_capacity == 0 ? 4 : _capacity * 2);
+			}
+			this->_str[this->_size] = ch;
+			this->_str[++this->_size] = '\0';
 		}
 
 		mstr operator=(const mstr& str)//=

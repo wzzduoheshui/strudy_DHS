@@ -1,14 +1,37 @@
 #include "string_class.hpp"
 using namespace MyString;
 
+void test3()
+{
+	mstr s1("aaaaa");
+	mstr s2("bbbbb");
+	cout << s1 << endl << s2 << endl;
+	s1.push_back('a');
+	s1.push_back('a');
+	s1.push_back('a');
+	s1.push_back('a');
+	s1.push_back('a');
+	s1.push_back('a');
+	s1.push_back('a');
+	s2.resize(10, 'x');
+	cout << s1 << endl << s2 << endl;
+}
 
 void test2()
 {
 	mstr s1("aaaaa");
 	mstr s2("bbbbb");
 	cout << s1 << endl << s2 << endl;
-	s1 += s2;
+	s1.pop_back();
+	s1.pop_back();
+	s1.pop_back();
+	s1.pop_back();
+	s1.pop_back();
+	s1.pop_back();
+	s1.pop_back();
+
 	cout << s1 << endl << s2 << endl;
+	cout << s1.getsize() << s1.getcapacity();
 }
 void test1()
 {
@@ -22,7 +45,7 @@ void test1()
 
 int main()
 {
-	test2();
+	test3();
 	return 0;
 }
 
