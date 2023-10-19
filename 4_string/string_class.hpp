@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
+#include <assert.h>
 
 using std::cout;
 using std::endl;
@@ -21,11 +22,8 @@ namespace MyString
 		{
 			_size = strlen(str);
 			_capacity = _size;
-			cout << "mstr(const char* str = "")" << str << "size:" << _size << endl;
-			_str = new char[_capacity + 20];//开了13个空间0-12
+			_str = new char[_capacity + 20];
 			strcpy(_str, str);
-			//memcpy(_str, str, _size);
-			//_str[_size] = '\0';
 		}
 
 		//mstr(const mstr& str)//拷贝构造
@@ -39,7 +37,6 @@ namespace MyString
 		// 拷贝构造
 		void mswap(mstr& str)
 		{
-			//cout << str._size << "   " << str._capacity << "    " << str._str << endl;
 			std::swap(this->_str, str._str);
 			std::swap(this->_capacity, str._capacity);
 			std::swap(this->_size, str._size);
@@ -49,9 +46,7 @@ namespace MyString
 			,_size(0)
 			,_capacity(0)
 		{
-			cout << "mstr(const mstr& str):" << str._str << endl << "size" << str._size << "capacity" << str._capacity << endl;
 			mstr tmp(str._str);
-			//cout << tmp << "size" << tmp._size << "capacity" << tmp._capacity << endl;
 			this->mswap(tmp);
 		}
 
@@ -62,7 +57,7 @@ namespace MyString
 			_size = _capacity = 0;
 		}
 
-		mstr operator+=(const mstr& str)//+=
+		void operator+=(const mstr& str)//+=
 		{
 			mstr new_str;
 			new_str._capacity = str._capacity + this->_capacity + 1;
@@ -74,8 +69,27 @@ namespace MyString
 			{
 				new_str._str[_capacity + i] = str._str[i];
 			}
-			cout << endl << new_str << endl;
-			return new_str;
+			this->swap(new_str);
+			//cout << endl << new_str << endl;
+		}
+
+		mstr operator=(const mstr& str)//=
+		{
+			mstr tmp(str);
+			this->mswap(tmp);
+			return *this;
+		}
+
+		const char& operator[](size_t n)const
+		{
+			assert(n < this->_size);
+			return _str[n];
+		}
+
+		char operator[](size_t n)
+		{
+			assert(n < this->_size);
+			return _str[n];
 		}
 
 		size_t getsize()//获取size
