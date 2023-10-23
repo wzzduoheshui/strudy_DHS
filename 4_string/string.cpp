@@ -13,7 +13,7 @@ void test3()
 	s1.push_back('a');
 	s1.push_back('a');
 	s1.push_back('a');
-	s2.resize(10, 'x');
+	s2.resize(100, 'x');
 	cout << s1 << endl << s2 << endl;
 }
 
