@@ -1,53 +1,39 @@
 #include "string_class.hpp"
+#pragma once
 using namespace MyString;
 
-void test3()
-{
-	mstr s1("aaaaa");
-	mstr s2("bbbbb");
-	cout << s1 << endl << s2 << endl;
-	s1.push_back('a');
-	s1.push_back('a');
-	s1.push_back('a');
-	s1.push_back('a');
-	s1.push_back('a');
-	s1.push_back('a');
-	s1.push_back('a');
-	s2.resize(100, 'x');
-	cout << s1 << endl << s2 << endl;
-}
-
-void test2()
-{
-	mstr s1("aaaaa");
-	mstr s2("bbbbb");
-	cout << s1 << endl << s2 << endl;
-	s1.pop_back();
-	s1.pop_back();
-	s1.pop_back();
-	s1.pop_back();
-	s1.pop_back();
-	s1.pop_back();
-	s1.pop_back();
-
-	cout << s1 << endl << s2 << endl;
-	cout << s1.getsize() << s1.getcapacity();
-}
-void test1()
-{
-	mstr s1("aaaaa");
-	mstr s2("bbbbb");
-	cout << s1 << endl << s2 << endl;
-	s1 = s2;
-	cout << s1 << endl << s2 << endl;
-}
 
 
 int main()
 {
-	test3();
-	return 0;
+	test9();
+	return  0;
 }
+
+
+//int mian()
+//{
+//	std::string s1("hello");
+//	std::string::iterator left = s1.begin();
+//	std::string::iterator right = s1.end();
+//	while (left < right)
+//	{
+//		char tmp = *left;
+//		*left = *right;
+//		*right = tmp;
+//		left++;
+//		right--;
+//	}
+//	std::cout << s1 << std::endl;
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	test5();
+//	return 0;
+//}
 
 //int main()
 //{

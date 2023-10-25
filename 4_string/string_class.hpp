@@ -1,7 +1,10 @@
+#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 #include <assert.h>
+
+void test9();
 
 using std::cout;
 using std::endl;
@@ -14,6 +17,31 @@ namespace MyString
 	public:
 		friend ostream& operator<<(ostream& cout, const mstr& str);//cout
 		friend ostream& operator>>(ostream& cin, const mstr& str);//cin
+
+
+		typedef char* iterator;//定义迭代器
+		typedef const char* const_iterator;//const迭代器
+
+		iterator begin()
+		{
+			return _str;
+		}
+
+		iterator end()
+		{
+			return _str + _size - 1;
+		}
+
+		const_iterator const_begin()const//函数名字后跟const表示该函数为只读函数，不做任何成员修改
+		{
+			return _str;
+		}
+
+		const_iterator const_end()const
+		{
+			return _str + _size - 1;
+		}
+
 
 		mstr(const char* str = "")//构造
 			:_str(nullptr)
@@ -63,24 +91,86 @@ namespace MyString
 			new_str._capacity = str._capacity + this->_capacity + 1;
 			new_str._str = new char[new_str._capacity];
 			new_str._size = _size + str._size;
-			
-			memcpy(new_str._str, _str, _capacity);
-			for (int i = 0; i < str._capacity; i++)
+
+			memcpy(new_str._str, _str, _size);
+
+			//mstr new_str;
+			//new_str._capacity = str._capacity + this->_capacity + 1;
+			//new_str._str = new char[new_str._capacity];
+			//new_str._size = _size + str._size;
+			//
+			//memcpy(new_str._str, _str, _capacity);
+			//for (int i = 0; i < str._capacity; i++)
+			//{
+			//	new_str._str[_capacity + i] = str._str[i];
+			//}
+			//this->swap(new_str);
+			////cout << endl << new_str << endl;
+		}
+
+		void erase(size_t pos, size_t len = std::string::npos)
+		{
+			if (pos >= _size)
 			{
-				new_str._str[_capacity + i] = str._str[i];
+				cout << "pos error!" << endl;
 			}
-			this->swap(new_str);
-			//cout << endl << new_str << endl;
+			else
+			{
+				//一直删除到结尾
+				if (len == std::string::npos || len >= _size - pos)
+				{
+					_str[pos] = '\0';
+					_size = pos;
+				}
+				//不删除到结尾，涉及元素挪动
+				else
+				{
+					strcpy(_str + pos, _str + pos + len);
+					_size -= len;
+				}
+			}
+		}
+
+\
+
+		mstr& insert(size_t pos, const mstr& s)
+		{
+			//判断pos是否合法
+			if (pos > _size)
+			{
+				cout << "pos error!" << endl;
+			}
+			else
+			{
+            	//检查空间
+				if ((_size + s._size) >= _capacity)
+				{
+					reserve(_size + s._size);
+				}
+
+				//挪动数据
+				size_t end = _size + s._size;
+				while (end >= pos + s._size)
+				{
+					_str[end] = _str[end - s._size];
+					--end;
+				}
+
+				//拷贝
+				strncpy(_str + pos, s._str, s._size);
+				_size += s._size;
+			}
+			return *this;
 		}
 
 		void reserve(size_t n)//扩容
 		{
 			if (n > this->_capacity)
 			{
-				//char* tmp = new char[n + 1];
-				//strcpy(tmp, _str);
-				//delete[] _str;
-				//this->_str = tmp;
+				char* tmp = new char[n + 1];
+				strcpy(tmp, _str);
+				delete[] _str;
+				this->_str = tmp;
 				this->_capacity = n;
 			}
 		}
@@ -138,7 +228,7 @@ namespace MyString
 			return _str[n];
 		}
 
-		char operator[](size_t n)
+		char& operator[](size_t n)
 		{
 			assert(n < this->_size);
 			return _str[n];
