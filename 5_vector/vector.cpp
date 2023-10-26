@@ -3,5 +3,6 @@
 
 int main()
 {
+	test8();
 	return 0;
 }
