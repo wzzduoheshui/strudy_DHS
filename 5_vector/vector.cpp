@@ -3,6 +3,6 @@
 
 int main()
 {
-	test8();
+	test10();
 	return 0;
 }

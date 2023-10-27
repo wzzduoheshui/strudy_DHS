@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <string>
 
 
-void test8();
+void test10();
 
 namespace myvector
 {
@@ -147,19 +148,38 @@ namespace myvector
 			//assert(n <= npos);//开辟空间不能超过最大空间
 			if (n > this->getcapacity())//需要开辟空间
 			{
-				iterator _new = new value_type[n];//定义临时变量
-				memcpy(_new, _start, sizeof(value_type)* getsize());//拷贝数据
-				//拷贝数据的时候记得大小要乘数据类型的大小
-				this->_finish = _new + this->getsize();//改变指针
-				this->_end_of_storage = _new + n;
-				this->_start = _new;
+				//iterator _new = new value_type[n];//定义临时变量
+				//memcpy(_new, _start, sizeof(value_type)* getsize());//拷贝数据  //有浅拷贝的嫌疑  还存在内存泄露
+				////拷贝数据的时候记得大小要乘数据类型的大小
+				//this->_finish = _new + this->getsize();//改变指针
+				//this->_end_of_storage = _new + n;
+				//this->_start = _new;
+
+				size_t sz = getsize();
+				T* tmp = new T[n];
+				if (_start)
+				{
+					for (int i = 0; i < sz; i++)
+					{
+						tmp[i] = _start[i];
+					}
+
+					delete[] _start;
+				}
+
+				_start = tmp;
+				_finish = _start + sz;
+				_end_of_storage = _start + n;
+
 			}
 		}
 
 		//push_back
 		void push_back(const value_type& x)
 		{
-			if (_finish + 1 >= _end_of_storage)//检查空间
+
+			//跑到这里，_finish==nullptr  对于nullptr+1本身就是错误
+			if (_finish == _end_of_storage)//检查空间
 			{
 				reserve(getcapacity() == 0 ? 4 : getcapacity() * 2);//扩容
 			}
@@ -198,13 +218,43 @@ namespace myvector
 			return _end_of_storage - _start;
 		}
 
-		//构造
+		////构造
 		myvct()
 			:_start(nullptr)
 			,_finish(nullptr)
 			,_end_of_storage(nullptr)
 		{}
 
+		//构造
+		//vector<int> arr(10,1)
+		myvct(size_t num, const value_type& _vec = value_type())
+			:_start(nullptr)
+			,_finish(nullptr)
+			,_end_of_storage(nullptr)
+		{
+			//这里多了一次刚刚
+			for (int i = 0; i < num; i++)
+			{
+				push_back(_vec);
+			}
+		}
+
+		//构造
+		template<typename InputIterator>
+		//myvct(const InputIterator& _first, const InputIterator& _end)  //  string
+		myvct(InputIterator _first, InputIterator _end)  //  string
+
+			:_start(nullptr)
+			,_finish(nullptr)
+			,_end_of_storage(nullptr)
+		{
+			InputIterator _tmp = _first;
+			while (_tmp != _end)
+			{
+				this->push_back(*_tmp);
+				_tmp++;
+			}
+		}
 
 		//析构
 		~myvct()

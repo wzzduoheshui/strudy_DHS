@@ -14,6 +14,27 @@ void print(const myvct<T>& v)
 	std::cout << std::endl;
 }
 
+void test10()
+{
+	//std::string s("hello world!");
+	//myvct<int> ch(s.begin(), s.end());
+	//std::vector<int> v(s.begin(), s.end());
+
+
+	//myvct<char> c(10, 'a');
+	//myvct<char> ch(c.begin(), c.end());
+	
+
+	//print(ch);
+}
+
+void test9()
+{
+	//myvct<int> v1(10, { "1","2","3","4" });
+	myvct<int> v1(10,1);
+	print(v1);
+}
+
 void test8()
 {
 	myvct<int> v1;
