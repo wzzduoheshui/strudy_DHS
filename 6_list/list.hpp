@@ -95,6 +95,37 @@ namespace DHRS
             _head->prev = _head;
         }
 
+
+        void emptyInit()
+        {
+            _head = new Node;
+            _head->next = _head;
+            _head->prev = _head;
+        }
+
+        template <typename InputIterator>
+        mylist(InputIterator first, InputIterator last)
+        {
+            emptyInit();
+            while (first != last)
+            {
+                push_back(*first);
+                ++first;
+            }
+        }
+
+        void swap(mylist<T>& x)
+        {
+            std::swap(_head, x._head);
+        }
+
+        mylist(const mylist<T>& list)
+        {
+            emptyInit();
+            mylist<T> tmp(list.begin(), list.end());
+            swap(tmp);
+        }
+
         void push_back(const T& x)
         {
             Node* _tail = _head->prev;//记住尾结点
